@@ -1,0 +1,72 @@
+
+body {
+    background-color: #011d42;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: medium;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td.logo {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td.headertag {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+    font-size: large;
+    color: rgb(255, 255, 255);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.form, tr.form, td.form {
+    width: 70%;
+    opacity: 0.9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color:rgb(91, 203, 255);
+    padding: 20px;
+    border-spacing: 5px;
+    color:rgb(0, 0, 0);
+}
+
+th.form {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    background-color:rgb(150, 199, 255);
+    padding: 20px;
+    border-spacing: 20px;
+    color:rgb(0, 0, 0);
+}
+
+p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+    font-size: 70px;
+    color: rgb(0, 174, 255);;
+}
+
+input {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+p.footer {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    color: rgb(0, 174, 255);
+}
+
+p.Date {
+    font-size: 25px;
+    color: rgb(0, 174, 255);
+}
+
+span {
+    color: rgb(0, 174, 255);
+    font-size: 25px;
+}

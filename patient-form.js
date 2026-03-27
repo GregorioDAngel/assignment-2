@@ -7,6 +7,8 @@
     Description: This is the JavaScript file for the patient-form
 */
 
+//Global error flag used by all validation functions
+var error_flag = 0;
 
 // Set up some starting points
 function setup()
@@ -68,17 +70,6 @@ function getdata1() {
    }
 }
 
-
-/* function getrangedata() {
-  var slider = document.getElementById("budget");
-  document.getElementById("rangedisplay").value = slider;
-}
-*/
-
-/* This version gets the data from the form explicitely by field name. 
-function getdata2()
-*/
-
 /* These are the subroutines to check inidivudial fields  */
 function checkfirstname()
     {
@@ -132,7 +123,7 @@ function checkuserid() {
     var IDoutput;
     var IDinput = document.getElementById("userid").value;
     console.log(IDinput);
-    //Special Char
+    //Special Character check
     if(IDinput.match(/[!\@#\$%&*\-_\\.+\(\)]/)) {
       document.getElementById("userid_message").innerHTML = "Invalid characters in UserID.";;
       error_flag = 1;
@@ -140,6 +131,24 @@ function checkuserid() {
       document.getElementById("userid_message").innerHTML = "";
     }
 }
+
+function checkUserIDvsPassword() {
+  var userID = document.getElementById("userid").value;
+  var password = document.getElementById("password1").value;
+  
+  if (userID && password && userID == password) {
+    //show the error message
+    document.getElementById("userid_message").innerHTML = "UserID and Password cannot be the same.";
+    error_flag = 1;
+  } 
+    else {
+      if (document.getElementById("userid_message").innerHTML == "UserID and Password cannot be the same.") {
+        document.getElementById("userid_message").innerHTML = "";
+
+      }
+    }
+  }
+
 
 // Deal with password    
 function passwordentry() 
@@ -203,19 +212,19 @@ function checkpassword2() {
       }
     }
 // Check other fields
-function checkaddr1() {
-    x = document.getElementById("addr1").value;
+function checkaddress1() {
+    x = document.getElementById("address1").value;
     console.log(x.value);
     console.log(x.length);
     if (x.length < 2 ) {  
-      document.getElementById("addr1_message").innerHTML = "Enter something on address line";  
+      document.getElementById("address1_message").innerHTML = "Enter something on address line";  
       error_flag = 1; 
       console.log(error_flag);
       }
       else { 
-          document.getElementById("addr1_message").innerHTML = "";  
+          document.getElementById("address1_message").innerHTML = "";  
       }
-      console.log(addr1_message);
+      console.log(address1_message);
 }
 function checkaddr2() {}
 
@@ -240,19 +249,98 @@ function checkstate() {
 }
 //    if (document.getElementById("state").length = 0 ) {  error_flag = 1; }
 
+//Email Validation
+function checkemail() {
+  var email = document.getElementById("email").value;
+  var email_message = document.getElementById("email_message");
+
+  var emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+
+  if (!email) {
+    email_message.innerHTML = "Please enter an email address.";
+    error_flag = 1;
+  } else if (!emailPattern.test(email)) {
+    email_message.innerHTML = "Please enter a valid email address.";
+    error_flag = 1;
+  } else {
+    email_message.innerHTML = "";
+  }
+}
+//DoB Validation ensuring it can't be in the future and not older than 120 years from date
+function checkDoB() {
+  var DoBinput = document.getElementById("birthday").value;
+  var DoB_message = document.getElementById("birthday_message");
+
+  var value = DoBinput.value;
+  if (!value) {
+    DoB_message.innerHTML = "Please enter a date of birth.";
+    error_flag = 1;
+    return;
+  }
+  
+  var DoB = new Date(value);
+  if (isNaN(DoB.getTime())) {
+    DoB_message.innerHTML = "Please enter a valid date of birth.";
+    error_flag = 1;
+    return;
+  }
+  var today = new Date();
+  //normalize time
+  today.setHours(0, 0, 0, 0);
+  
+  var minDoB = new Date();
+  minDoB.setFullYear(today.getFullYear() - 120);
+  minDoB.setHours(0, 0, 0, 0);
+
+  if (dob < minDob || dob > today) {
+    DoB_message.innerHTML = "Date of Birth must be within the last 120 years and not in the future.";
+    error_flag = 1;
+  }
+  else {
+    DoB_message.innerHTML = "";
+  }
+}
+//Phone Validation
+function checkphone() {
+  var phone = document.getElementById("phone").value;
+  var phone_message = document.getElementById("phone_message");
+  var phonePattern = /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/;
+
+  if (!phone) {
+    phone_message.innerHTML = "Please enter a phone number.";
+    error_flag = 1;
+  } else if (!phonePattern.test(phone)) {
+    phone_message.innerHTML = "Please enter a valid phone number.";
+    error_flag = 1;
+  } else {
+    phone_message.innerHTML = "";
+  }
+}
+
 // Check everything
     function checkform() 
       {
-        error_flag = "0";
+        // Reset the error flag
+        error_flag = 0;
+
         checkfirstname();
         checkmiddle();
         checklastname();
         checkaddr1();
         checkaddr2();
+        checkemail();
+        checkDoB();
+        checkphone();
         // etc...
         passwordentry();
+
+        if(typeof checkUserIDvsPassword == "function") {
+          checkUserIDvsPassword();          
+        }
+
         console.log("Error flag: "+error_flag);
-        if (error_flag == "1")
+
+        if (error_flag == 1)
         {
           alert("Please fix the indicated errors!");
         }

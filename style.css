@@ -55,6 +55,20 @@ p.outputdata {
     color: rgb(0, 174, 255);
 }
 
+p.thank-you {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    color: rgb(0, 174, 255);
+}
+
+p.Contact {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    color: rgb(0, 174, 255);
+}
+
 input {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: normal;

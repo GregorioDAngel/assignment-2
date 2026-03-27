@@ -1,3 +1,5 @@
+//static table I added but removed since JS made one dynamically. Kept here in case needed or to be modified else where later//
+
 <!--<table class="output">
                     <tbody>
                         <tr>

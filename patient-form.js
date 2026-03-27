@@ -19,7 +19,9 @@ This subroutine simply retrieves the data names and entered data from the form.
 This code doesn't require that you know how many elements are in your form OR the names of the variables. 
 */
 function removedata1() {
-  document.getElementById("outputformdata").innerHTML = "(you started over)";
+  var out = document.getElementById("outputformdata");
+  out.style.display = "none";
+  out.innerHTML = "(Your data has been removed.)";
 }
  
 function getdata1() {
@@ -60,7 +62,9 @@ function getdata1() {
 
    if (formoutput.length>0) { 
       formoutput = formoutput + "</table>";
-      document.getElementById("outputformdata").innerHTML = formoutput;
+      var out = document.getElementById("outputformdata");
+      out.innerHTML = formoutput;
+      out.style.display = "block";
    }
 }
 

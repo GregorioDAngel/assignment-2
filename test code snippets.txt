@@ -1,0 +1,114 @@
+<!--<table class="output">
+                    <tbody>
+                        <tr>
+                            <th>Dataname</th>
+                            <th>Type</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr>
+                            <td align="right">email</td>
+                            <td align="right">email</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">userID</td>
+                            <td align="right">text</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">password</td>
+                            <td align="right">password</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">confirmpassword</td>
+                            <td align="right">password</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">firstname</td>
+                            <td align="right">text</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">middleinit</td>
+                            <td align="right">text</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">lastname</td>
+                            <td align="right">text</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">dateofbirth</td>
+                            <td align="right">date</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">SocialSecurity</td>
+                            <td align="right">text</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">address1</td>
+                            <td align="right">text</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">address2</td>
+                            <td align="right">text</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">city</td>
+                            <td align="right">text</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">state</td>
+                            <td align="right">select</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">zip</td>
+                            <td align="right">text</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">phone</td>
+                            <td align="right">text</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Sex</td>
+                            <td align="right">text</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">PreferredLanguage</td>
+                            <td align="right">text</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Insurance</td>
+                            <td align="right">text</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Condition</td>
+                            <td align="right">text</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">OtherCondition</td>
+                            <td align="right">textarea</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">PainSeverity</td>
+                            <td align="right">range</td>
+                            <td class="outputdata"></td>
+                        </tr>
+                    </tbody>
+                </table> -->

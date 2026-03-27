@@ -23,7 +23,7 @@
                 <tbody>
                     <tr>
                         <td class="Logo" width="300" height="300">
-                            <img src="UnitedMeicalLogo.jpg" alt="logo" width="250" height="250">
+                            <img src="UnitedMedicalLogo.jpg" alt="logo" width="250" height="250">
                         </td>
                         <td id="headertag" valign="top" align="center">
                             <p class="title">United Medical</p>
@@ -68,8 +68,8 @@
                                         minlength="5" 
                                         maxlength="30" 
                                         id="userid" 
-                                        pattern="[A-Za-z]+[A-Za-z0-9-_]{8,}" 
-                                        name="firstname" 
+                                        pattern="[A-Za-z]+[A-Za-z0-9-_]{5,}" 
+                                        name="UserID" 
                                         required="" 
                                         oninvalid="this.setCustomValidity('Invalid User ID. Enter letters, numbers, dash or underscores. 1st character must be a letter.')" 
                                         oninput="this.setCustomValidity('')" placeholder=""
@@ -179,7 +179,7 @@
                                         name="lname"
                                         required=""
                                         oninvalid="this.setCustomValidity('Last Name is required')"
-                                        oninput="this.checklastname()"
+                                        oninput="checklastname()"
                                         placeholder="(req'd)"
                                         onblur="checklastname()">
                             </td>
@@ -242,8 +242,8 @@
                                     <input  type="text" 
                                             size="20" 
                                             maxlength="30" 
-                                            id="address1" 
-                                            name="address1" 
+                                            id="address2" 
+                                            name="address2" 
                                             placeholder="Apt #, etc...">
                                 </td>
                             </tr>    
@@ -333,12 +333,12 @@
                                     <label for="Sex">Sex:</label>
                                 </td>
                                 <td>
-                                    <input type="radio" id="Sex" name="Sex" value="Male">
-                                    <label for="Sex">Male</label>
-                                    <input type="radio" id="Sex" name="Sex" value="Female">
-                                    <label for="Sex">Female</label>
-                                    <input type="radio" id="Sex" name="Sex" value="Other">
-                                    <label for="Sex">Other</label>
+                                    <input type="radio" id="Sex1" name="Sex" value="Male">
+                                    <label for="Sex1">Male</label>
+                                    <input type="radio" id="Sex2" name="Sex" value="Female">
+                                    <label for="Sex2">Female</label>
+                                    <input type="radio" id="Sex3" name="Sex" value="Other">
+                                    <label for="Sex3">Other</label>
                                 </td>
                             </tr>
                             <tr class="form">
@@ -346,12 +346,12 @@
                                     <label for="Language">Preferred Language:</label>
                                 </td>
                                 <td>
-                                    <input type="radio" id="Language" name="Language" value="English">
-                                    <label for="Language">English</label>
-                                    <input type="radio" id="Language" name="Language" value="Spanish">
-                                    <label for="Language">Spanish</label>
-                                    <input type="radio" id="Language" name="Language" value="Other">
-                                    <label for="Language">Other</label>
+                                    <input type="radio" id="Language-EN" name="Language" value="English">
+                                    <label for="Language-EN">English</label>
+                                    <input type="radio" id="Language-ES" name="Language" value="Spanish">
+                                    <label for="Language-ES">Spanish</label>
+                                    <input type="radio" id="Language-Other" name="Language" value="Other">
+                                    <label for="Language-Other">Other</label>
                                 </td>
                             </tr>
                             <tr class="form">
@@ -359,10 +359,10 @@
                                     <label for="Insurance">Do you have insurance:</label>
                                 </td>
                                 <td>
-                                    <input type="radio" id="Insurance" name="Insurance" value="Yes">
-                                    <label for="Insurance">Yes</label>
-                                    <input type="radio" id="Insurance" name="Insurance" value="No">
-                                    <label for="Insurance">No</label>
+                                    <input type="radio" id="Insurance" name="Insurance1" value="Yes">
+                                    <label for="Insurance1">Yes</label>
+                                    <input type="radio" id="Insurance" name="Insurance2" value="No">
+                                    <label for="Insurance2">No</label>
                                 </td>
                             </tr>
                             <!-- Conditions that may apply to the patient in order to help us better serve them -->
@@ -410,7 +410,7 @@
                                             value="Kidney Disease">
                                 </td>
                                 <td>
-                                    <label for="condition">Kidney Disease</label>
+                                    <label for="condition4">Kidney Disease</label>
                                 </td>
                             </tr>
                             <tr class="form">
@@ -421,7 +421,7 @@
                                             value="Covid">
                                 </td>
                                 <td>
-                                    <label for="condition">Covid</label>
+                                    <label for="condition5">Covid</label>
                                 </td>
                             </tr>
                             <tr class="form">
@@ -437,7 +437,7 @@
                             </tr>
                             <tr class="form">
                                 <td align="right">
-                                    <label for="Description">Other:</label></label>
+                                    <label for="Description">Other:</label>
                                 </td>
                                 <td>
                                     <textarea 
@@ -453,7 +453,7 @@
                                     <label for="wellnesscheck">On a scale of 1-10, how severe is the pain?</label>
                                 </td>
                                 <td align="center">
-                                    "&nbsp;1 "
+                                    &nbsp;1
                                     <input 
                                         type="range" 
                                         class="slider"
@@ -461,7 +461,7 @@
                                         name="wellnesscheck" 
                                         min="1" 
                                         max="10">
-                                    " 10&nbsp;"
+                                    10&nbsp;
                                     <br>
                                     <span id="rangedisplay" width="10">5</span>
                                     <script>
@@ -501,122 +501,7 @@
         </form>
         </div>
         <div>
-            <p class="outputdata" id="outputformdata">
-                <table class="output">
-                    <tbody>
-                        <tr>
-                            <th>Dataname</th>
-                            <th>Type</th>
-                            <th>Value</th>
-                        </tr>
-                        <tr>
-                            <td align="right">email</td>
-                            <td align="right">email</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">userID</td>
-                            <td align="right">text</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">password</td>
-                            <td align="right">password</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">confirmpassword</td>
-                            <td align="right">password</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">firstname</td>
-                            <td align="right">text</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">middleinit</td>
-                            <td align="right">text</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">lastname</td>
-                            <td align="right">text</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">dateofbirth</td>
-                            <td align="right">date</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">SocialSecurity</td>
-                            <td align="right">text</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">address1</td>
-                            <td align="right">text</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">address2</td>
-                            <td align="right">text</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">city</td>
-                            <td align="right">text</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">state</td>
-                            <td align="right">select</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">zip</td>
-                            <td align="right">text</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">phone</td>
-                            <td align="right">text</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">Sex</td>
-                            <td align="right">text</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">PreferredLanguage</td>
-                            <td align="right">text</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">Insurance</td>
-                            <td align="right">text</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">Condition</td>
-                            <td align="right">text</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">OtherCondition</td>
-                            <td align="right">textarea</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                        <tr>
-                            <td align="right">PainSeverity</td>
-                            <td align="right">range</td>
-                            <td class="outputdata"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </p>
+            <p class="outputdata" id="outputformdata" style="display:none;"></p>
         </div>
         <!-- This is the Javascript for the patient-form date -->
         <script src="patient-form.js"></script>

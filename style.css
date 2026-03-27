@@ -41,11 +41,18 @@ th.form {
     color:rgb(0, 0, 0);
 }
 
-p {
+p.title {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: normal;
     font-size: 70px;
     color: rgb(0, 174, 255);;
+}
+
+p.outputdata {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+    font-size: 40px;
+    color: rgb(0, 174, 255);
 }
 
 input {
@@ -66,14 +73,28 @@ p.Date {
     color: rgb(0, 174, 255);
 }
 
+span {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgb(0, 84, 122);
+}
+
+span.Date {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(0, 174, 255);
+}
+
 table.output, tr.output, td.output {
   width: 70%;
   opacity: 0.9;
   font-family: Arial, Helvetica, sans-serif;
-  background-color:green;
+  background-color: #011d42;
   padding: 2px;
   border-spacing: 2px;
-  color:rgb(0, 0, 0);
+  color:rgb(0, 174, 255);
 }
 td.outputdata {
   width: 70%;

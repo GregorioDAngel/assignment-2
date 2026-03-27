@@ -1,3 +1,12 @@
+/*
+    Name: patient-form.js file for MIS 3371 assignment 1
+    Author: Gregorio Del Angel
+    File: patient-form.js
+    Date Created: 2/17/2026
+    Date Last Modified: 3/27/2026
+    Description: This is the JavaScript file for the patient-form
+*/
+
 
 // Set up some starting points
 function setup()

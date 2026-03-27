@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-    Name: patient-form for MIS 3371 assignment 1
+    Name: patient-form for MIS 3371 assignment 2
     Author: Gregorio Del Angel
     File: patient-form.html (has to be named index.html for github to read and publish on pages)
     Date Created: 2/17/2026
@@ -26,11 +26,11 @@
                             <img src="UnitedMeicalLogo.jpg" alt="logo" width="250" height="250">
                         </td>
                         <td id="headertag" valign="top" align="center">
-                            <p>United Medical</p>
+                            <p class="title">United Medical</p>
                         </td>
                         <td valign="bottom" valign="center">
                             <p class="Date" align="left">Today's Date:</p>
-                            <span id="today"></span>
+                            <span class="Date" id="today"></span>
                         </td>
                     </tr>
                 </tbody>
@@ -39,7 +39,7 @@
         <hr>
 <!-- This is the body for the page -->
         <div id="body">
-            <form action="patient-form-thank-you.html">
+            <form name="patient-form" id="signup" onreset="removedata1()" action="patient-form-thank-you.html">
                 <table class="form">
                     <tbody>
                         <!-- This is the beginning section for the patient-form where the user sets up a new account -->
@@ -501,7 +501,7 @@
         </form>
         </div>
         <div>
-            <p id="outputformdata">
+            <p class="outputdata" id="outputformdata">
                 <table class="output">
                     <tbody>
                         <tr>

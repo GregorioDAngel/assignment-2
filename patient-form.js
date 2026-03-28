@@ -275,19 +275,18 @@ function checkemail() {
 }
 //DoB Validation ensuring it can't be in the future and not older than 120 years from date
 function checkDoB() {
-  var DoBinput = document.getElementById("birthday").value;
-  var DoB_message = document.getElementById("birthday_message");
+  var value = document.getElementById("birthday").value;
+  var birthday_message = document.getElementById("birthday_message");
 
-  var value = DoBinput.value;
   if (!value) {
-    DoB_message.innerHTML = "Please enter a date of birth.";
+    birthday_message.innerHTML = "Please enter a date of birth.";
     error_flag = 1;
     return;
   }
   
-  var DoB = new Date(value);
-  if (isNaN(DoB.getTime())) {
-    DoB_message.innerHTML = "Please enter a valid date of birth.";
+  var dob = new Date(value);
+  if (isNaN(dob.getTime())) {
+    birthday_message.innerHTML = "Please enter a valid date of birth.";
     error_flag = 1;
     return;
   }
@@ -295,16 +294,16 @@ function checkDoB() {
   //normalize time
   today.setHours(0, 0, 0, 0);
   
-  var minDoB = new Date();
-  minDoB.setFullYear(today.getFullYear() - 120);
-  minDoB.setHours(0, 0, 0, 0);
+  var minDob = new Date();
+  minDob.setFullYear(today.getFullYear() - 120);
+  minDob.setHours(0, 0, 0, 0);
 
   if (dob < minDob || dob > today) {
-    DoB_message.innerHTML = "Date of Birth must be within the last 120 years and not in the future.";
+    birthday_message.innerHTML = "Date of Birth must be within the last 120 years and not in the future.";
     error_flag = 1;
   }
   else {
-    DoB_message.innerHTML = "";
+    birthday_message.innerHTML = "";
   }
 }
 //Phone Validation

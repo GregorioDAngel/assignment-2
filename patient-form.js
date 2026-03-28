@@ -236,7 +236,7 @@ function checkaddress1() {
 function checkaddr2() {}
 
 function checkcity() {
-         if (document.getElementById("city").value.match(/^[ a-zA-Z3-5'-]+$/)) {
+         if (document.getElementById("city").value.match(/^[ a-zA-Z'-]+$/)) {
               document.getElementById("city_message").innerHTML = "";  
             }
             else  {
@@ -247,7 +247,7 @@ function checkcity() {
 function checkstate() {
         z=document.getElementById("state").value;
         if(z=="") { 
-              document.getElementById("state_message").innerHTML = "Please choose a state";  
+              document.getElementById("state_message").innerHTML = "Please choose a state.";  
               error_flag = 1;
         }
         else {

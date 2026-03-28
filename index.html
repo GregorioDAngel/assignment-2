@@ -296,13 +296,15 @@
                                             oninvalid="this.setCustomValidity('You forgot City');" 
                                             oninput="this.setCustomValidity(''); checkcity();"
                                             onblur="checkcity();" 
-                                            placeholder="Anytown (req'd)">
+                                            placeholder="Anytown (req'd)"
+                                            title="Please enter the city you currently reside in.">
                                     <select name="state" 
                                             id="state"
                                             required=""
                                             oninvalid="this.setCustomValidity('You forgot State');"
                                             oninput="this.setCustomValidity(''); checkstate();"
-                                            onblur="checkstate();">
+                                            onblur="checkstate();"
+                                            title="Please enter the state you currently reside in.">
                                             <option value="" selected="selected">Select a State</option>
                                             <option value="AL">Alabama</option>
                                             <option value="AK">Alaska</option>

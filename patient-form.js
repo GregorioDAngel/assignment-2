@@ -86,7 +86,7 @@ function checkfirstname()
               error_flag = 1;
         }
         else {
-            if (x.match(/[a-zA-Z3-5'-]+$/)) {
+            if (x.match(/[a-zA-Z'-]+$/)) {
               document.getElementById("name_message").innerHTML = "";  
             }
             else  {
@@ -116,7 +116,7 @@ function checklastname()
               error_flag = 1;  
         }
         else {
-            if (x.match(/[a-zA-Z3-5'-]+$/)) {
+            if (x.match(/[a-zA-Z'-]+$/)) {
               document.getElementById("name_message").innerHTML = "";  
             }
             else  {

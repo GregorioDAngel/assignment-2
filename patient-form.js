@@ -4,7 +4,8 @@
     File: patient-form.js
     Date Created: 2/17/2026
     Date Last Modified: 3/27/2026
-    Description: This is the JavaScript file for the patient-form
+    Description: This is the JavaScript file for the patient-form A lot was inspired by the work from Prof. Jake's assignment 3 as a baseline,
+    but I have included the validation check for the phone, DoB, email, UserIDvsPass, and the UserID, as well as modifying the pre-existing code.
 */
 
 //Global error flag used by all validation functions
@@ -31,6 +32,12 @@ function getdata1() {
   var formoutput;
   var datatype;
   var i;
+
+  var userIDlowercase = document.getElementById("userid");
+  if (userIDlowercase && userIDlowercase.value) {
+    userIDlowercase.value = userIDlowercase.value.toLowerCase();
+  }
+
   formoutput = "<table class='output'><th>Dataname</th><th>Type</th><th>Value</th>";
   for (i = 0; i < formcontents.length; i++) {
             console.log("item: "+i+" "+formcontents.elements[i].name+" = "+formcontents.elements[i].value);
@@ -348,4 +355,4 @@ function checkphone() {
           document.getElementById("submit").disabled = false;
         }
       }
-    /* End of document: homework2.js */
+    /* End of document: patient-form.js */
